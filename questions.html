@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       
+        <title>Online Quiz</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+
+        <div class="box" id="questionScreen" >
+            <div class="title">
+                Online Quiz
+            </div>
+
+            <div class="header">
+                   <div class="timerBox">Time Left - <span></span> </div>
+            </div>
+            <div class="questionBox">
+                In which of the following years, the UNO constituted?
+            </div>
+            <div class="optionBox">
+                <span onclick="checkAnswer(this)" data-opt="1"> </span>
+                <span onclick="checkAnswer(this)" data-opt="2"> </span>
+                <span onclick="checkAnswer(this)" data-opt="3"> </span>
+                <span onclick="checkAnswer(this)" data-opt="4"> </span>
+            </div>
+
+            <div class="footer">
+                <button onclick="showResult()">Show result</button>
+                <button onclick="showNext()" >Next</button>
+               
+            </div>
+
+        </div>
+
+        <div class="box" id="resultScreen"   style="display: none;">
+            <div class="title">
+                Online Quiz Result
+            </div>
+
+            <div class="resultBox">
+                <label>Questions : </label>
+                <span id="totalQuestion">10</span>
+
+                <label>Attempted : </label>
+                <span id="attemptQuestion">0</span>
+
+                <label>Correct : </label>
+                <span id="correctAnswers">0</span>
+
+                <label>Wrong : </label>
+                <span id="wrongAnswers">0</span>
+
+                <label>Final Result : </label>
+                <span id="finalresult"></span>
+                               
+            </div>
+
+            <div class="buttonBox">
+                <a href="index.html">Start again</a>
+            </div>
+
+        </div> 
+       
+    </body>
+    <script src="jquery.js"></script>
+    <script src="quiz.js"></script>
+    <script src="script.js"></script>
+</html>
